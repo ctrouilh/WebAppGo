@@ -8,7 +8,8 @@ ADD . /go/src/github.com/ctrouilh/WebApp/
 # Build the outyet command inside the container.
 # (You may fetch or manage dependencies here,
 # either manually or with a tool like "godep".)
-RUN go install github.com/ctrouilh/WebApp/
+RUN go install github.com/ctrouilh/WebApp/ \
+	&& go get github.com/CiscoZeus/go-zeusclient 
 
 # Run the outyet command by default when the container starts.
 ENTRYPOINT /go/bin/WebApp
