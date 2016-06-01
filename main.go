@@ -31,11 +31,20 @@ func main() {
 	}
 	suc, err := z.PostLogs(logs)
 	if err != nil {
-		fmt.Println("Zeus response:", err.Error())
+		fmt.Println("ERROR: PostLogs response:", err.Error())
 	} else {
-		fmt.Println("Zeus response:", suc)
+		fmt.Println("SUCESS: PostLogs response:", suc)
 	}
 
+	total, logs, err := z.GetLogs("syslog", "", "", 0, 0, 0, 0)
+    if err != nil {
+        fmt.Println("ERROR: getLogs response:", err.Error())
+    } else {
+        fmt.Println("SUCESS: getLogs response: %s", logs)
+        fmt.Println("SUCESS: getLogs response:", total)
+    }
+
+	
  	fmt.Printf("Starting http server...\n")
  	http.HandleFunc("/", handler)
     http.ListenAndServe(":8080", nil)
