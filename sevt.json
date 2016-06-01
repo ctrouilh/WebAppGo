@@ -2,7 +2,7 @@
   "kind": "ReplicationController",
   "apiVersion": "v1",
   "metadata": {
-    "name": "hello-sevt-recplica",
+    "name": "hello-sevt-replica",
     "labels": {
       "state": "serving"
     }
@@ -30,7 +30,7 @@
                 "protocol": "TCP"
               }
             ],
-            "imagePullPolicy": "IfNotPresent"
+            "imagePullPolicy": "Always"
           }
         ],
         "restartPolicy": "Always",
