@@ -36,11 +36,11 @@ func main() {
 		fmt.Println("SUCESS: PostLogs response:", suc)
 	}
 
-	total, logs, err := z.GetLogs("syslog", "", "", 0, 0, 0, 0)
+	total, logsret, err := z.GetLogs("syslog", "", "", 0, 0, 0, 0)
     if err != nil {
         fmt.Println("ERROR: getLogs response:", err.Error())
     } else {
-        fmt.Println("SUCESS: getLogs response: %s", logs)
+        fmt.Println("SUCESS: getLogs response: %s", logsret)
         fmt.Println("SUCESS: getLogs response:", total)
     }
 

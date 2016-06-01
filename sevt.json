@@ -30,6 +30,12 @@
                 "protocol": "TCP"
               }
             ],
+			"env": [
+			  {
+				"name": "ZEUS_TOKEN",
+				"value": "8dcccc00"
+			  }
+			],			
             "imagePullPolicy": "Always"
           }
         ],
