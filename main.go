@@ -26,7 +26,8 @@ func main() {
 				"OS":       runtime.GOOS,
 				"USER":     os.Getenv("USER"),
 				"HOME":     os.Getenv("HOME"),
-				"HOSTNAME": os.Getenv("HOSTNAME")},
+				"HOSTNAME": os.Getenv("HOSTNAME")
+				},
 		},
 	}
 	suc, err := z.PostLogs(logs)
@@ -40,8 +41,8 @@ func main() {
     if err != nil {
         fmt.Println("ERROR: getLogs response:", err.Error())
     } else {
-        fmt.Println("SUCESS: getLogs response: %s", logsret)
-        fmt.Println("SUCESS: getLogs response:", total)
+        fmt.Println("SUCESS: getLogs response: ", logsret)
+        fmt.Println("SUCESS: getLogs response: ", total)
     }
 
 	
